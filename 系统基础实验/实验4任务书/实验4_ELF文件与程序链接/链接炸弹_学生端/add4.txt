@@ -1,0 +1,9 @@
+
+add4.o：     文件格式 elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	48 8d 7d ed          	lea    -0x13(%rbp),%rdi
+   	E8 96 FF FF	

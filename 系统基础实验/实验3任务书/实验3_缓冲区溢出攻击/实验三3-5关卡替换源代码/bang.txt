@@ -1,0 +1,11 @@
+
+bang.o：     文件格式 elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	8b 04 25 48 41 40 00 	mov    0x404148,%eax
+   7:	89 04 25 50 41 40 00 	mov    %eax,0x404150
+   e:	68 5e 13 40 00       	push   $0x40135e
+  13:	c3                   	ret    

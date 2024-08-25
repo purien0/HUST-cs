@@ -1,0 +1,9 @@
+﻿  bits.cpp
+C:\Users\purien\Desktop\bits\bits\bits.cpp(107,6): warning C4101: “n8”: 未引用的局部变量
+C:\Users\purien\Desktop\bits\bits\bits.cpp(107,10): warning C4101: “m8”: 未引用的局部变量
+C:\Users\purien\Desktop\bits\bits\bits.cpp(226,24): warning C4838: 从“unsigned int”转换到“int”需要收缩转换
+C:\Users\purien\Desktop\bits\bits\bits.cpp(226,42): warning C4838: 从“unsigned int”转换到“int”需要收缩转换
+C:\Users\purien\Desktop\bits\bits\bits.cpp(226,60): warning C4838: 从“unsigned int”转换到“int”需要收缩转换
+C:\Users\purien\Desktop\bits\bits\bits.cpp(216,12): warning C4101: “ans2”: 未引用的局部变量
+C:\Users\purien\Desktop\bits\bits\bits.cpp(216,6): warning C4101: “ans1”: 未引用的局部变量
+  bits.vcxproj -> C:\Users\purien\Desktop\bits\x64\Debug\bits.exe

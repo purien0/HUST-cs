@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\purien\\Desktop\\conpress\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A62A969F-4BE7-48CB-BDEE-4AFC9CEB001F}|conpress\\conpress.vcxproj|C:\\Users\\purien\\Desktop\\conpress\\conpress\\conpress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A62A969F-4BE7-48CB-BDEE-4AFC9CEB001F}|conpress\\conpress.vcxproj|solutionrelative:conpress\\conpress.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "conpress.cpp",
+              "DocumentMoniker": "C:\\Users\\purien\\Desktop\\conpress\\conpress\\conpress.cpp",
+              "RelativeDocumentMoniker": "conpress\\conpress.cpp",
+              "ToolTip": "C:\\Users\\purien\\Desktop\\conpress\\conpress\\conpress.cpp",
+              "RelativeToolTip": "conpress\\conpress.cpp",
+              "ViewState": "AQIAAIsAAAAAAAAAAIBIwJ4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-20T05:34:45.825Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

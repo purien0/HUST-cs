@@ -1,0 +1,14 @@
+
+koboom.o：     文件格式 elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	b8 da 90 0d 0c       	mov    $0xc0d90da,%eax
+   5:	48 8d 15 10 00 00 00 	lea    0x10(%rip),%rdx        # 0x1c
+   c:	52                   	push   %rdx
+   d:	48 8d 15 10 00 00 00 	lea    0x10(%rip),%rdx        # 0x24
+  14:	52                   	push   %rdx
+  15:	c9                   	leave  
+  16:	c3                   	ret    
