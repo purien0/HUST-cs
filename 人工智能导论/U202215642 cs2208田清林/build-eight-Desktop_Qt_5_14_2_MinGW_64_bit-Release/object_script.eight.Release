@@ -1,0 +1,10 @@
+release/dialog.o
+release/dialog2.o
+release/function.o
+release/main.o
+release/waitingdia.o
+release/widget.o
+release/moc_dialog.o
+release/moc_dialog2.o
+release/moc_waitingdia.o
+release/moc_widget.o

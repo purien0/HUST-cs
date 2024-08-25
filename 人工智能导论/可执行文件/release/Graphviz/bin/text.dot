@@ -1,0 +1,50 @@
+graph a {
+    layout="neato"
+
+    movie[shape=box]
+    movie--movie_ID[len = 1.5]
+    movie--title[len = 1.5]
+    movie--type[len = 1.5]
+    movie--runtime[len = 1.5]
+    movie--release_date[len = 1.5]
+    movie--director[len = 1.5]
+    movie--starring[len = 1.5]
+    
+    customer[shape=box]
+    customer--c_ID[len = 1.5]
+    customer--name[len = 1.5]
+    customer--phone[len = 1.5]
+
+    hall[shape=box]
+    hall--hall_ID[len = 1.5]
+    hall--mode[len = 1.5]
+    hall--capacity[len = 1.5]
+    hall--location[len = 1.5]
+
+    schedule[shape=box]
+    schedule--schedule_ID[len = 1.5]
+    schedule--date[len = 1.5]
+    schedule--time[len = 1.5]
+    schedule--price[len = 1.5]
+    schedule--number[len = 1.5]
+
+    ticket[shape=box]
+    ticket--ticket_ID[len = 1.5]
+    ticket--seat_num[len = 1.5]
+
+    buy[shape=diamond]
+    customer--buy[label="1", len = 1.5]
+    buy--ticket[label="n", len = 1.5]
+
+    belongs[shape=diamond]
+    schedule--belongs[label="1", len = 1.5]
+    belongs--ticket[label="n", len = 1.5]
+
+    show[shape=diamond]
+    movie--show[label="1", len = 1.5]
+    show--schedule[label="n", len = 1.5]
+
+    arrange[shape=diamond]
+    hall--arrange[label="1", len = 1.5]
+    arrange--schedule[label="n", len = 1.5]
+}

@@ -1,0 +1,10 @@
+debug/dialog.o
+debug/dialog2.o
+debug/function.o
+debug/main.o
+debug/waitingdia.o
+debug/widget.o
+debug/moc_dialog.o
+debug/moc_dialog2.o
+debug/moc_waitingdia.o
+debug/moc_widget.o

@@ -1,0 +1,38 @@
+ -- 6) 查找相似的理财客户
+--   请用一条SQL语句实现该查询：
+
+
+-- select a.pro_c_id pac,pbc,cnt common,crank
+-- from property a,
+-- (
+-- rank() over(partition by (a.pro_c_id,b.pro_c_id) order by cnt desc)as crank
+-- select pac,pbc,cnt
+-- from (
+select *
+from
+(
+select pac,pbc,cnt common,rank() over(partition by pac order by cnt desc,pbc asc)as crank
+from(
+select a.c_id pac,b.pro_c_id pbc,count(b.pro_pif_id) cnt#买过至少一款理财产品的客户b,与购买的产品数
+from client a,property b
+where a.c_id != b.pro_c_id  and b.pro_type = 1 and b.pro_pif_id in
+(
+select c.pro_pif_id#a买过的理财产品
+from property c
+where c.pro_c_id = a.c_id and c.pro_type = 1 
+)
+group by a.c_id,b.pro_c_id
+)as x
+)as y
+where crank<3
+order by pac asc,crank asc;
+-- where crank<3;
+-- )as y
+-- order by pac asc,crank asc;
+
+
+
+
+
+
+/*  end  of  your code  */

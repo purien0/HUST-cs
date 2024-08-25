@@ -1,0 +1,63 @@
+-- 15) 查询资产表中客户编号，客户基金投资总收益,基金投资总收益的排名(从高到低排名)。
+--     总收益相同时名次亦相同(即并列名次)。总收益命名为total_revenue, 名次命名为rank。
+--     第一条SQL语句实现全局名次不连续的排名，
+--     第二条SQL语句实现全局名次连续的排名。
+
+-- (1) 基金总收益排名(名次不连续)
+-- select c_id,total_revenue,rank
+-- from 
+select a.pro_c_id,a.total_revenue total_revenue, count(1) `rank`
+from (select pro_c_id,sum(pro_income)
+from property
+where pro_type = 3
+group by pro_c_id
+)as a(pro_c_id,total_revenue),
+(select pro_c_id,sum(pro_income)
+from property
+where pro_type = 3
+group by pro_c_id
+)as b(pro_c_id,total_revenue)
+where a.total_revenue<b.total_revenue or a.pro_c_id = b.pro_c_id
+group by a.pro_c_id
+order by total_revenue desc,pro_c_id asc;
+-- (2) 基金总收益排名(名次连续)
+select pro_c_id, sum(pro_income) as total_revenue,
+dense_rank() over(order by sum(pro_income) desc) as `rank`
+from property
+where pro_type = 3
+group by pro_c_id
+order by sum(pro_income) desc, pro_c_id;
+-- select aa.pro_c_id,aa.total_revenue total_revenue, count(1) `rank`
+-- from (select a1.pro_c_id,a1.total_revenue total_revenue, count(1) rk
+-- from (select pro_c_id,sum(pro_income)
+-- from property
+-- where pro_type = 3
+-- group by pro_c_id
+-- )as a1(pro_c_id,total_revenue),
+-- (select pro_c_id,sum(pro_income)
+-- from property
+-- where pro_type = 3
+-- group by pro_c_id
+-- )as b1(pro_c_id,total_revenue)
+-- where a1.total_revenue<b1.total_revenue or a1.pro_c_id = b1.pro_c_id
+-- group by a1.pro_c_id
+-- )as aa(pro_c_id,total_revenue,rk),
+-- (select a2.pro_c_id,a2.total_revenue total_revenue, count(1) rk
+-- from (select pro_c_id,sum(pro_income)
+-- from property
+-- where pro_type = 3
+-- group by pro_c_id
+-- )as a2(pro_c_id,total_revenue),
+-- (select pro_c_id,sum(pro_income)
+-- from property
+-- where pro_type = 3
+-- group by pro_c_id
+-- )as b2(pro_c_id,total_revenue)
+-- where a2.total_revenue<b2.total_revenue or a2.pro_c_id = b2.pro_c_id
+-- group by a2.pro_c_id
+-- )as bb(pro_c_id,total_revenue,rk)
+-- where aa.rk>=bb.rk or aa.pro_c_id = bb.pro_c_id
+-- group by aa.pro_c_id
+-- order by total_revenue desc,pro_c_id asc;
+
+/*  end  of  your code  */
